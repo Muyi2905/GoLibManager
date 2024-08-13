@@ -27,8 +27,14 @@ func (b *Book) CreateBook() *Book {
 	return b
 }
 
-func GetBook() []Book{
-var Books []Book
-db.Find(&Books)
-return Books
+func GetBook() []Book {
+	var Books []Book
+	db.Find(&Books)
+	return Books
+}
+
+func GetBookById(Id int64) (*Book, *gorm.DB){
+	var getBook Book 
+	idData:= db.Where("Id=?", Id).Find(&getBook)
+	return &getBook, idData
 }
