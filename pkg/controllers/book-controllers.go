@@ -10,5 +10,5 @@ import (
 	"strconv"
 )
 
-var newbook models.Book
+var Newbook models.Book
 
