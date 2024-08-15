@@ -9,10 +9,8 @@ vendor/
 *.mod
 *.sum
 
-<<<<<<< HEAD
 # Environment files
-=======
->>>>>>> b96ed43c18f46f59c0560866e8baf10e9629284c
+.env
 
 
 # IDE and editor directories
