@@ -32,7 +32,7 @@ func GetBookById(w http.ResponseWriter, r *http.Request) {
 	bookID := vars["bookID"]
 	ID, err := strconv.ParseInt(bookID, 0, 0)
 	if err != nil {
-		fmt.Println("Error getting book id", httpstatus)
+		fmt.Println("Error getting book id", http.StatusNotFound)
 	}
 	bookdetails,_ := models.GetBookById(ID)
 	res,_ := json.Marshal(bookdetails)
@@ -42,7 +42,11 @@ func GetBookById(w http.ResponseWriter, r *http.Request) {
 }
 
 func CreateBook(w http.ResponseWriter, r*http.Request){
-
-	book:= models.Book()
+createBook:= models.Book{}
+utils.ParseForm(r, createBook)
+b:= createBook.CreateBook()
+res,_ := json.Marshal(b)
+w.WriteHeader(http.StatusOK)
+w.Write(res)
 
 }
