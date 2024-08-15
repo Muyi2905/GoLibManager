@@ -9,8 +9,7 @@ vendor/
 *.mod
 *.sum
 
-# Environment files
-.env
+
 
 # IDE and editor directories
 .idea/
