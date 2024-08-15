@@ -1,0 +1,31 @@
+# Go build output
+/bin/
+/obj/
+
+# Dependency directories (Go modules and vendor directory)
+vendor/
+
+# Go module cache
+*.mod
+*.sum
+
+# Environment files
+.env
+
+# IDE and editor directories
+.idea/
+.vscode/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# Backup files
+*.bak
+*.swp
+
+# Test binary, if applicable
+*.test
