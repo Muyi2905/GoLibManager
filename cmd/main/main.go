@@ -5,7 +5,6 @@ import (
 	"net/http"
 
 	"github.com/Muyi2905/GoLibManager/pkg/routes"
-	"github.com/github.com/Muyi2905/GoLibManager/pkg/routes"
 	"github.com/gorilla/mux"
 )
 
